@@ -1,5 +1,5 @@
-st1=input().lower()
-st1=st1.replace(" ","_")
-st2=input()
-st3=st1+st2
-print(st3)
+string1=input().lower()
+string1=string1.replace(" ","_")
+string2=input()
+combine=string1+string2
+print(combine)
