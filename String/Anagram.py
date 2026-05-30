@@ -1,3 +1,10 @@
+"""
+Given two strings, the task is to check whether they contain the same characters in the same frequency, even if the order is different. This condition is known as being anagrams. For example:
+
+Input: "listen", "silent"
+Output: Yes
+"""
+
 def anagram(string1,string2):
     freq=[0]*26
     if len(string1)!=len(string2):
