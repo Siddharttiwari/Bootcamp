@@ -2,7 +2,7 @@ class Node:
     def __init__(self,data):
         self.data=data
         self.next=None
-
+"""
 def insertAtI(head,i,data):
     if i<0 :
         return head
@@ -22,7 +22,7 @@ def insertAtI(head,i,data):
         head=newNode
     newNode.next=curr
     return head
-    
+    """
 def takeinput():
     inputlist=[int(el) for el in input().split()]
     head=None
@@ -38,9 +38,24 @@ def takeinput():
         else:
             tail.next=newNode
             tail=newNode
+
         
     return head
 
+
+def insertAti(head,i,data):
+    if i<0:
+        return head
+    if i==0:
+        newnode=Node(data)
+        newnode.next=head
+        return newnode
+    if head is None:
+        return None
+    smallhead=insertAti(head.next,i-1,data)
+    head.next=smallhead
+    return head
+    
 
 def printll(head):
     while head is not None:
@@ -51,5 +66,5 @@ def printll(head):
 
 head=takeinput()
 printll(head)
-head=insertAtI(head,2,6)
+head=insertAti(head,2,6)
 printll(head)
