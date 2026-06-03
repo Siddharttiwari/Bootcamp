@@ -1,3 +1,4 @@
+
 class Node:
     def __init__(self,data):
         self.data=data
@@ -29,7 +30,7 @@ def printll(head):
     print("None")
     return
 
-    
+"""    
 def evenodd(head):
     curr=head
     even=[]
@@ -57,9 +58,40 @@ def evenodd(head):
             tail=newNode
     return new_head
 
+"""
+
+def evenodd(head):
+    if head is None or head.next is None:
+        return head
+    evenhead=eventail=None
+    oddhead=oddtail=None
+    curr=head
+    while curr:
+        if curr.data%2==0:
+            if not evenhead:
+                evenhead=eventail=curr
+            else:
+                eventail.next=curr
+                eventail=curr
+        else:
+            if not oddhead:
+                oddhead=oddtail=curr
+            else:
+                oddtail.next=curr
+                oddtail=curr
+        curr=curr.next
+    if not evenhead:
+        return oddhead
+    if not oddhead:
+        return evenhead
+    eventail.next=oddhead
+    oddtail.next=None
+    return evenhead
 
 
 head=takeinput()
 printll(head)
 head=evenodd(head)
 printll(head)
+
+
