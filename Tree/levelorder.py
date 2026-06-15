@@ -1,0 +1,26 @@
+from collections import deque
+def levelOrder(self, root):
+        ans = []
+        if not root:
+           
+            return ans
+        q = deque([root])
+        
+        while q:
+        
+            level = []
+            for _ in range(len(q)):
+                
+                node = q.popleft()
+                
+                level.append(node.data)
+                
+                
+                if node.left:
+                    q.append(node.left)
+                if node.right:
+                    q.append(node.right)
+            
+            ans.append(level)
+        
+        return ans
