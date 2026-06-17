@@ -13,15 +13,21 @@ def treeInput():
     root.left=leftside
     root.right=rightside
     return root
-
-def diameter(root):
-    maxi=0
+maxi=0
+def calculateHeight(root):
+    global maxi
     if root is None:
         return 0
-    LF=diameter(root.left)
-    RH=diameter(root.right)
+    LF=calculateHeight(root.left)
+    RH=calculateHeight(root.right)
     maxi=max(maxi,LF+RH)
     return 1+max(LF,RH)
+
+def diameter(root):
+        global maxi
+        calculateHeight(root)
+        return maxi
+
 def printTree(root):
     if root ==None:
         return
