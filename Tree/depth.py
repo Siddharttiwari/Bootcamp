@@ -14,12 +14,14 @@ def treeinput():
     root.left=leftTree
     root.right=rightTree
     return root
+
 def depth(root):
     if root is None:
         return 0
     leftside=depth(root.left)
     rightside=depth(root.right)
     return 1+max(leftside,rightside)
+
 def printTree(root):
     if root ==None:
         return
