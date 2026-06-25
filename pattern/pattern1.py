@@ -1,0 +1,12 @@
+n=int(input())
+i=1
+while i<n+1:
+    j=1
+    while j<n+1:
+        print('*',end='')
+        j+=1
+    print()
+    i+=1
+
+    
+
