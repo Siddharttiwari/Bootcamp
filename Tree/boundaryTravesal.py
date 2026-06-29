@@ -52,3 +52,4 @@ class Node:
         self.addright(root,res)
         
         return res
+    
