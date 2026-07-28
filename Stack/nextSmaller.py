@@ -1,8 +1,8 @@
-    def nextsmaller(self,arr):
-        n=len(arr)
-		st=[]
-		ans=[-1]*n
-		for i in range(n-1,-1,-1):
+def nextsmaller(self,arr):
+    n=len(arr)
+	st=[]
+	ans=[-1]*n
+	for i in range(n-1,-1,-1):
 		    while st and st[-1]>=arr[i]:
 		        st.pop()
 		    if st:
