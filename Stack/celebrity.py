@@ -1,4 +1,5 @@
 def celebrity(M):
+        
         n = len(M)
         
         # Top and Down pointers
